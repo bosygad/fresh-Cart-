@@ -1,0 +1,16 @@
+<section class="my-5">
+   
+    <div
+        class="row justify-content-center align-items-center g-2"
+    >
+        <div class="col-md-4" *ngFor="let item of CategoriesList ">
+      <div class="product  cursor-pointer text-center" [routerLink]="['/CategoriesDetails' , item._id]" (click)="getCategoriesDetails(item._id)">
+       <img [src]="item.image" class="w-100" [alt]="item.name" height="300">
+       <h2 class="text-main h4 py-3">{{item.name}}</h2>
+      </div>
+        </div>
+       
+    </div>
+    
+    </section>
+    

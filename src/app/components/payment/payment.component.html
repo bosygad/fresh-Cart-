@@ -1,0 +1,32 @@
+<section>
+    
+    <form [formGroup]="CheckOut" (ngSubmit)="payment(CheckOut)">
+        <div
+            class="row justify-content-center align-items-center g-2"
+        >
+            <div class="col-md-8 m-auto py-5">
+                <div class="layerCart bg-main-light p-5">
+    <div class="details my-2">
+        <label for="details">details</label>
+        <input formControlName="details" type="text"  id="details" class="form-control">
+    </div>
+    <div class="phone my-2">
+        <label for="phone">phone</label>
+        <input formControlName="phone" type="tel" id="phone" class="form-control">
+    </div>
+    <div class="city my-2">
+        <label for="city">city</label>
+        <input formControlName="city" type="text" id="city" class="form-control">
+    </div>
+    <div class="my-3">
+        <button class="btn-main text-light" type="submit">pay</button>
+    </div>
+                </div>
+            </div>
+         
+            
+        </div>
+        
+    </form>
+
+</section>

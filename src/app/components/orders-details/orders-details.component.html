@@ -1,0 +1,18 @@
+<section class="w-3/4 mx-auto">
+  <div class="bg-main-light py-5 my-5">
+    <h2 class=" text-main text-center">Orders detailes</h2>
+    <div *ngFor="let item of orders" class="my-5 shadow-xl p-5">
+        <div class="flex justify-between">
+           
+        <h3 class="text-blue-500">order id : {{item.id}}</h3>
+        <h3 class="text-blue-500">Total Price : {{item.totalOrderPrice | currency:'EGP '}}</h3>
+        </div>
+        <div class="row mt-4 justify-center">
+            <div *ngFor="let product of item.cartItems" class="col-md-2">
+                <img [src]="product.product.imageCover" alt="" class="w-100">
+                <p class="text-center">{{product.product.title}}</p>
+            </div>
+        </div>
+    </div>
+  </div>
+</section>
