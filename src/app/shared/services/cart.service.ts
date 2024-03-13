@@ -46,7 +46,7 @@ export class CartService {
     }
   
     checkout(id:string , formData:any):Observable<any> {
-      return this._HttpClient.post(`https://ecommerce.routemisr.com/api/v1/orders/checkout-session/${id}?url=http://localhost:4200`,{
+      return this._HttpClient.post(`https://ecommerce.routemisr.com/api/v1/orders/checkout-session/${id}?url=${window.location.origin}`,{
         shipingAdress : formData
       })
     }
